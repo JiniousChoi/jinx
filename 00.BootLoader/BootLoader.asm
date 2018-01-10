@@ -3,6 +3,18 @@
 
 SECTION .text
 
+mov ax, 0xB800
+mov ds, ax
+
+mov byte [0x00], 'J'
+mov byte [0x01], 0x42
+mov byte [0x02], 'I'
+mov byte [0x03], 0x42
+mov byte [0x04], 'N'
+mov byte [0x05], 0x42
+mov byte [0x06], 'X'
+mov byte [0x07], 0x42
+
 jmp $
 
 times 510-($-$$) db 0x00
